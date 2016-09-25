@@ -1,0 +1,18 @@
+﻿<link rel="stylesheet" type="text/css" href="./css/blog.css">
+
+<% articles = articles[0] %>
+
+<div class="mainFrame container-fluid">
+    <div class="show-article-mainframe" data-id="<%= articles.articleId %>">
+        <h2 class="show-article-title"><%- articles.articleTitle %></h2>
+        <p class="show-article-info"><%- articles.publicTime %>  <a href="/user/userid=<%-articles.ownUserId %>"><%- articles.userNick %></a><%- articles.articleType %></p>
+        <p class="show-article-content"><%- articles.articleContent %></p>
+    
+        <!-- UY BEGIN -->
+        <div id="uyan_frame" ></div>
+        <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2096971"></script>
+        <!-- UY END -->
+    </div>
+</div>
+
+<%- partial('./models/fixedBar',{collectinfo:collectinfo}) %>

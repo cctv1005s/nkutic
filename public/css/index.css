@@ -1,0 +1,67 @@
+body{min-width: 972px;}
+
+@media (max-width: 1560px){
+   .imgBanner{left: 3em;width:20%;}
+   #content{left: 30%;}
+}
+/*图片栏内容 大于1560时的大小*/
+@media (min-width: 1560px){
+    .imgBanner{left: 10%;width:20%}
+    #content{left: 32%;}
+}
+/*小于776px时*/
+@media (max-width: 776px){
+    .imgBanner{display: none;}
+     #content{left: 6em;}
+}
+
+@media (max-width: 500px){
+     #content{left: 5%;}
+    .search-btn{width: 100%;}
+}
+
+.imgBanner{position: fixed;background: url(../img/mybanner.gif) 0 0 no-repeat;background-size: cover;}
+
+.brief{position: absolute;bottom: 10%;text-align: center;color: white;width: 100%;}
+.brief button{font-size: 1.5em;font-family: "微软雅黑";}
+.brief h3{color: white;}
+
+/*首页内容栏*/
+#content{padding: 0;position: absolute;width: 50%;min-width: 351px;}
+
+#content .nav-title{margin-top: 15px;font-size: 1em;font-family: "微软雅黑";border-bottom: solid 4px #f3f3f4;margin-bottom: -4px;}
+#content .nav-title .active , #content .nav-title li:hover{margin-bottom: -4px;border-bottom: solid 4px black;}
+
+
+/*登录界面*/
+/*宽度小于500px时*/
+@media (max-width: 500px){
+    .login-box{width: 100%;left: 0 !important;}
+    .login-box-title{font-size: 3em !important;}
+    .login-box-line{display: none;}
+    .input-group{width: 80% !important;}
+}
+
+.login-box{position: absolute;left: 30%;text-align: center;margin-top: 12em;}
+.login-box-title{color: #493A3D;font-size: 5em;}
+.login-box-line{color: #E2E2E2;}
+.login-box-line a {color: grey;text-decoration: none;}
+.input-group{width: 50%;margin: 20px auto;}
+
+
+/*两个按钮公用了一个样式*/
+#registerBtn,#loginBtn{border: none;height: 3em;width: 13em;margin-top: 3em;font-size: 17px;font-family: "微软雅黑";background: #493A3D;color: white;}
+
+/*注册界面*/
+
+/*浮窗*/
+
+
+
+
+
+
+
+
+
+

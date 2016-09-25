@@ -1,0 +1,25 @@
+﻿<% for(var i = 0;i < articles.length ;i++){ %>
+    
+    <div class="media content-media" data-id="<%- articles[i].articleId %>">
+        <div class="media-body">
+            <p><span class="contentUserName"><a href="/user/<%= articles[i].userId %>"><%= articles[i].userNick %></a></span> · <span class="contentPublicTime"><%= articles[i].publicTime %></span></p>
+            <a href="/blog?action=show&articleid=<%- articles[i].articleId %>"><h3 class="contentUserTitle"><%= articles[i].articleTitle %></h3></a>
+            <p>阅读  <span class="readNum"><%= articles[i].readNum %>  </span>  喜欢 <span class="likeNum"> <%= articles[i].likeNum %> </span></p>
+        </div>
+
+        <div class="media-right">
+            <a href="#">
+                <img class="media-object" src="<%-articles[i].articleImg %>"/>
+            </a>
+        </div> 
+    </div>  
+<% } %>
+<% if(articles.length == 0){%>
+暂无文章
+<%}%>
+
+<style type="text/css">
+.mainContenItem{padding:30px 0 10px 45px ; border-bottom: dotted 1px #6b7776;min-width: 454px;}
+.content-media{border-bottom: dotted 1px grey;}
+.media-right img{max-height: 88px;max-width: 126px;}
+</style>

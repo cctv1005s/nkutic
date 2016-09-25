@@ -1,0 +1,35 @@
+ <%- Loader('/css/blog.min.css')
+    .css('/css/blog.css')
+    .css('/css/hideinfo.css')
+    .dev(filepath);
+%>
+
+<div class="mainFrame">
+<div class="nav-title  navbar">
+    <div class="nav-title-head clearfix" style="width:100%;">
+    <!--扔到服务器做重定向好了-->
+    <h2 class="navbar-text" >个人主页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+
+    <div >
+        <ul class=" nav navbar-nav ">
+            <li role="presentation" class="active"><a href="#">个人信息设置</a></li>
+            <li role="presentation"><a href="/setting/password/<%- user[0].userId %>">密码修改</a></li>
+        </ul>
+    </div>
+</div><!--navbar结束-->
+
+<% //一些设置
+userinfo = userinfo[0];
+%>
+
+<%- partial('./models/usersetting',{userinfo:userinfo}) %>
+
+</div><!--row结束-->
+</div><!--mainframe结束-->
+
+<%-
+    Loader('/css/blog.min.js')
+    .js('/js/writeblog.js')
+    .dev(filepath);
+%>

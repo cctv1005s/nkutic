@@ -1,0 +1,29 @@
+<!--
+* params- articles:文章列表 
+-->
+
+<% for(var j = 0;j < 6;j++){ %>
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 list">
+<%for(var i = j;i < articles.length ;i+=6){%>
+       <div class="article-item" data-id="<%-articles[i].articleId %>" data-flag="<%-articles[i].articleFlag %>">
+        <div class="thumbnail">
+          <% if(articles[i].articleImg){ %>
+          <img src="<%- articles[i].articleImg %>" alt="文章图片">
+          <% }else{ %>
+          <img src="<%- setting.articleImg %>" alt="文章图片">
+          <% } %>
+          <div class="caption" style="text-align:center">
+            <p><%- articles[i].publicTime %></p>
+            <a href="/blog?action=show&articleid=<%- articles[i].articleId %>" ><h4><%= articles[i].articleTitle %></h4></a><!--这里是标题-->
+            <div  class="breif"><%- articles[i].articleContent %> </div>
+          </div>
+          <div class="article-edit-box clearfix">
+              <a href="/blog?action=edit&articleid=<%- articles[i].articleId %>" class="col-xs-6 col-md-6 col-sm-6 edit"><h4><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></h4></a>
+              <a href="#" class="col-xs-6 col-md-6 col-sm-6 delete" data-id="<%-articles[i].articleId %>"><h4><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></h4></a>
+          </div>
+        </div>
+      </div>
+<%}%> 
+</div><!--list 结束-->
+<%}%>
+

@@ -1,0 +1,65 @@
+/*重写一些公共的部分*/
+p,h1,h2,h3,h4{font-family: "微软雅黑";}
+p{margin: 0;font-size:1em;}
+h3{font-weight: bold;color: #6b7776;}
+
+/*导航栏*/
+@media (min-width:1560px){
+   .guideBar{width:10%;position:fixed;left: 0;top: 0;z-index: 999;
+    -ms-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    transition: 0.3s;}  
+}
+
+/*小于1560px时*/
+@media (max-width: 1560px) {
+    .guideBar{width:3em;position:fixed;left: 0;top: 0;z-index: 999;
+    -ms-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    transition: 0.3s;}
+    .list-group-item{white-space: nowrap;overflow: hidden;width: 100%;}
+    .guidebarintro{display: none;}
+}
+
+/*手机端小于500px时*/
+@media (max-width: 500px){
+    .guideBar{width:50%;position:fixed;left: 0;top: 0;z-index: 999;
+    -ms-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+    transition: 0.3s;}
+    .list-group-item p span:first-child{float: left;margin-right: 1em;}
+    .guidebarintro{display: block;}
+    .guideBar-show{
+    -ms-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    }
+    /*小黑点*/
+    .flowWindow{position: fixed;height: 3em;width:3em;background: black;z-index: 999;right: 0;bottom: 4em;opacity: 0.6;text-align: center;line-height: 3.7em;display: block !important;}
+    .flowWindow>h3{margin: 0;color: grey;}
+    .flowWindow-active{opacity: 0.8 !important;}
+}
+
+.guideBar,.usergroup .list-group-item,.guideBar .basegroup .list-group-item{
+    background: rgb(73,58,61);
+}
+.guideBar .basegroup .active,.guideBar .basegroup .list-group-item:hover{background: rgb(213,185,112);}
+.guideBar .basegroup .list-group-item{color: #ffffff;border: none;}
+.usergroup {position: absolute;bottom: 3%;width: 100%;}
+.usergroup .list-group-item{border:none;color: white;width: 100%;}
+
+.guideBar-hidden{transform: translateX(-100%);}
+
+
+.flowWindow{display: none;}

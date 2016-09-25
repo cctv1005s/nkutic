@@ -1,0 +1,66 @@
+<div class="userSetting">
+<h3>用户基本信息</h3>
+
+<div class="setting-item">
+<img id="setting-userhead" src="<%- userinfo.userImg %>">
+<input class="user-head-img-input" type="file"></input>
+</div>
+
+<form method="post" action="">
+<input class="imgUrl" style="display:none;" name="imgUrl"></input>
+<div class="setting-item clearfix">
+    <label>用户名</label>
+    <div class="setting-item-content">
+        <span><%- userinfo.userNick %></span>
+    </div>
+</div>
+
+<div class="setting-item clearfix">
+    <label>个人介绍</label>
+    <div class="setting-item-content">
+        <span><%- userinfo.userBreif %></span><span class="glyphicon glyphicon-pencil tips">修改</span>
+        <div class="rebreifTable">
+            <textarea class="input-group rebreif" name="rebreif" placeholder="简介"></textarea>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-default saveinfo" type="submit">保存</button>
+</form>
+
+<style type="text/css">
+    .tips{color: #919191;text-indent: 10px;cursor: pointer;}
+
+    .setting-item{position: relative;margin-top: 10px;}
+    .setting-item >label{position: absolute;left: 0;}
+    .setting-item >img{height: 4em;width: 4em}
+    .setting-item-content{margin-left: 90px;}
+    .rebreif{display: none;}
+</style>
+
+<script type="text/javascript">
+    $('.tips').click(function(e){
+        $('.tips').hide();
+        $('.rebreif').show();
+    });
+
+    //在上传图片的时候要加一个保护机制
+    $('.user-head-img-input').change(function(event) {
+        var fileobj = $('.user-head-img-input').prop('files')[0];
+        console.log(fileobj);
+
+        var form = new FormData();
+        form.append('file',fileobj);
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function(){
+            imgUrl = xhr.responseText;
+            console.log(imgUrl);
+            $('#setting-userhead').attr('src',imgUrl);
+            $('.imgUrl').val(imgUrl);
+        }        
+        xhr.open("post",'/wangeditor', true);
+        xhr.send(form);
+       //拿到图片路径之后
+    });
+
+</script>

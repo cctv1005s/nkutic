@@ -1,0 +1,56 @@
+
+<body>
+    <!-- private -->
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+
+
+<div class="mainFrame">
+    <!-- 主框架 -->
+        <div class="widget imgBanner">
+
+            <div class="brief">
+                <% if(!user) {%>
+                <%- setting.breif.before  %>
+                <a class="btn btn-success btn-lg" href="/myblog">加入我们</a>
+                <% }else{ %>
+                <%- setting.breif.after  %>
+                <a class="btn btn-success btn-lg" href="/myblog">提笔写文章</a>
+                <%}%>
+            </div>
+        </div>
+
+        <div id="content" >
+            <div class="nav-title  navbar">
+
+                <div class="navbar-left">
+                    <ul class=" nav navbar-nav ">
+                        <li role="presentation" class="active col-xs-3 col-md-6 col-sm-6"><a href="#">suoyou</a></li>
+                        <li role="presentation" class="col-xs-3 col-md-6 col-sm-6"><a href="#">huodong</a></li>
+                    </ul>
+                </div>
+
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="搜索">
+                      <button type="submit" class="btn btn-default search-btn">搜索</button>
+                    </div>
+                </form>
+            </div>
+        <%- partial('./models/bloglist',{articles:articles}) %>
+    </div> <!-- content 结束 -->
+</div>
+
+
+
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script>
+
+    var windowHei = $(window).height();
+    //控制imgbanner和guideBar的大小的，使其自适应窗口
+    $('.imgBanner').height(windowHei);
+    $(window).resize(function(event) {
+        /* Act on the event */
+        $('.imgBanner').height($(window).height());
+    });
+
+</script>

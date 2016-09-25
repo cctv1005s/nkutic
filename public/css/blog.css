@@ -1,0 +1,118 @@
+body{background: #f3f3f4;min-width: 972px;}
+.leftArea{float: left;}
+.rightArea{float: right;}
+.oneline{width: 100%;border:solid 1px rgb(73,58,61);}
+@media(max-width: 500px){
+    .search-btn{width: 100%;}
+    /*显示文章*/
+    .show-article-mainframe{width: 100% !important;}
+    .mainFrame{width: 100% !important;left: 3% !important;}
+}
+
+@media(min-width: 1560px){
+    .col-md-3{width: 16.66666667%}
+}
+
+
+.img-userhead{height: 4em;width: 4em;}
+/*展示文章部分*/
+.mainFrame{position: absolute;left: 12%;width: 80%;}
+.article-edit-box{width: 100%;position: relative;text-align: center;background: #f3f3f4;cursor: pointer;}
+.article-edit-box a:first-child {border-right:1px dotted grey;}
+
+.nav-title{margin-top: 15px;font-size: 1em;font-family: "微软雅黑";border-bottom: solid 4px white;margin-bottom: 2em;}
+.nav-title .active ,  .nav-title li{float: left;}
+.nav-title .active ,  .nav-title li:hover{margin-bottom: -4px;border-bottom: solid 4px black;}
+
+.show-article-mainframe{width: 50%;margin:auto;margin-top: 3em;min-height: 1000px;position: relative;}
+.show-article-title{text-align: center;border-bottom: dotted 1px grey;padding: 1em;}
+.show-article-info{margin-bottom: 1em;color: grey;}
+
+
+/*友言评论*/
+#uyan_frame{width: 100%;}
+
+/*左下角的选栏*/
+.fixedBar{position: fixed;right: 2em;bottom: 3em;}
+.fixedBar ul li{list-style: none;display: block;border:1px solid #eeeeee ;cursor: pointer;width: 3em;height: 3em;background: white;}
+.fixedBar ul li:hover{opacity: 0.6;}
+.fixedBar ul li h3{line-height: 42px;margin: 0;text-align: center;color: #75B3AE;}
+.fixedBar ul .active{color: white;background: #493A3D;}
+.fixedBar ul .hidden{display: none;}
+
+.codeimgi{position: absolute;left: -247px;top: -164px;width: 266px;padding: 3px;border: 1px solid grey;box-shadow: 3px 3px 10px grey;background: white;color: black;opacity: 1;}
+
+.codeimgi img{width: 258px;height: 258px;}
+
+/*展示文章结束*/
+
+/*编辑文章部分*/
+/*编辑框的*/
+.article-edit-mainframe{margin-top:2em;}
+.article-edit{margin:auto;background: white;}
+.article-edit-title{font-size:2em;width:100%;text-align:center;font-family:'微软雅黑';}
+#editor-trigger{height: 800px;}
+.article-edit-buttongroup a{text-align: center;background: white;text-decoration: none;border:1px solid grey;color: black;}
+
+/*上传封面图片*/
+.file{ position: absolute;top: 0;left: 0;height: 100%;filter: alpha(opacity:0);opacity: 0;width: 100%;cursor: pointer }
+/*编辑文章部分结束*/
+
+/*消息界面*/
+.message-list  .message-list-item{cursor: pointer;}
+.message-list  .message-list-item:hover{background: #f4f4f3;}
+
+
+.talk-userhead{width: 10%;}
+.talk-content{width: 90%;margin-top: 0.2em;padding: 10px;}
+.left-bob,.right-bob{width: 100%;border: 1px solid rgb(219, 210, 210);border-radius: 3px;min-height: 4em;text-indent: 1em;position: relative;background-color: white;padding: 10px;}
+
+.left-bob{box-shadow: 3px 3px 10px grey;}
+
+.left-bob .left-bob-arrow,.left-bob .left-bob-inner-arrow,.right-bob .right-bob-arrow,.right-bob .right-bob-inner-arrow{height: 0;width: 0;line-height: 0px;font-size: 0px;position: absolute;}
+
+.left-bob .left-bob-arrow{border: solid 10px;border-color: transparent rgb(219, 210, 210) transparent transparent;left: -20px;top:0;}
+.left-bob .left-bob-inner-arrow{border: solid 8px;border-color: transparent white transparent transparent;left: -16px;top: 2px;}
+
+.right-bob{box-shadow: -3px 3px 10px grey;}
+.right-bob .right-bob-arrow{border: solid 10px;border-color: transparent  transparent transparent rgb(219, 210, 210);right: -20px;top:0;}
+.right-bob .right-bob-inner-arrow{border: solid 8px;border-color: transparent  transparent transparent white;right: -16px;top: 2px;}
+
+.mybutton{background: white;border: 1px solid grey;margin-top: 1em;width: 8em;height: 2em;border-radius: 2px;box-shadow: 1px 1px 6px grey;}
+.mybutton :hover{background: black;}
+
+
+.message-opbox{position: absolute;box-shadow: 3px 3px 10px grey;border: 1px solid #f4f4f3;z-index: 999;font-family: "微软雅黑";background: white;display: block;}
+.message-opbox .message-opbox-hidden{display: none;}
+.message-opbox-item{padding: 0.5em;cursor: pointer;}
+.message-opbox-item:hover{background: #f4f4f3;}
+/*消息界面结束*/
+
+/*课程部分*/
+.course-caption{text-align: center;}
+
+
+/*用户界面 */
+
+
+/*活动界面的css*/
+.act-tip-title{border-bottom: 1px solid black;margin-bottom: 1.5em;}
+.act-media{background: white;border: 1px solid #ddd;margin-bottom: 10px;}
+
+/*管理员界面的css*/
+.admin-activityinfo-wrap{margin-bottom: 10px;}
+.admin-userinfo{border-bottom: solid 1px grey;}
+.admin-userhead{height: 4em;width:4em;}
+.admin-user-opbox{background: #eeeeee;cursor: pointer;}
+.admin-user-opbox > h4{ float: left;width: 1em;width: 50%;text-align: center;}
+
+.admin-activity-item{padding: 20px;background: white;border: 1px solid#ddd;}
+.admin-activity-item > img{width: 100%;height: 300px;position: relative;}
+
+.admin-activity-op{text-align: center;}
+
+
+
+
+
+

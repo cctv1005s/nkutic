@@ -1,0 +1,53 @@
+<div class="userdetail">
+
+    <div class="userHead"><img class="img-circle" src="<%- userinfo.userImg?userinfo.userImg:setting.userImg %>" alt="用户头像" /></div>
+    <h3><%- userinfo.userNick %></h3>
+    <% if(userinfo.userBreif == null){%>
+        <p class="userBreif">"这个人很懒，什么都没有留下"</p>
+    <%}else{%>
+        <p class="userBreif"><%- userinfo.userBreif %></p>
+    <%}%>
+    <%if(user){%>
+    <button class="btn btn-info btn-sendmsg">send msg</button>
+    <div class="postmsg" style="text-align: center;display: none;">
+    <input class=" msgcontent" type="text"></input>
+
+    <button class="btn btn-default btn-postmsg" data-msgownid="<%- user[0].userId %>" data-msgonid="<%- userinfo.userId %>">send</button>
+    </div>
+    <%}%>
+</div>
+
+<style type="text/css">
+    .userdetail{text-align: center;margin-bottom: 20px;}
+    .userdetail .userHead > img{height:6em;width:6em;}
+    .userdetail .userBreif{font-style: italic;}
+    .msgcontent{width: 25%;height: 2.5em;}
+</style>
+
+<script type="text/javascript">
+
+    $(".btn-sendmsg").click(function(e){
+               $(".btn-sendmsg").hide();
+               $('.postmsg').show();
+    });
+
+    $('.btn-postmsg').click(function(e){
+                var msgonid =$('.btn-postmsg').attr('data-msgonid'),
+                msgownid = $('.btn-postmsg').attr('data-msgownid');
+                var msgContent = $('.msgcontent').val();
+
+                $.ajax({
+                    url:"/message/sendmsg",
+                    type:"Post",
+                    data:{
+                        msgownid:msgownid,
+                        msgonid:msgonid,
+                        msgContent:msgContent,
+                        sendTime:new Date().getTime()
+                    },
+                    success:function(data){
+                        swal('发送成功');
+                    }
+    });
+            });
+</script>
