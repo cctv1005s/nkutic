@@ -145,7 +145,7 @@ exports.postBlog = function(req,res,next){
             case "save":
 
             var sql = "update nkuticweb.articleinfo set articleTitle = '"+articleTitle+"' ,articleContent = '"+articleContent+"',articleImg = '"+articleImg+"',publicTime = "+publicTime+" ,articleType = "+articleType+"  where articleId = "+articleId;
-            console.log(sql);
+            
             mysql.query(sql,function(err,result){
                 if(err){
                     next(err);

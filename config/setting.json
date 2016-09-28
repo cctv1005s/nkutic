@@ -4,5 +4,6 @@
     "userImg":"http://localhost:3000/img/userhead/user1.jpg",
     "articleImg":"http://localhost:3000/img/articleimg/article0.gif",
     "hostname":"http://localhost:3000",
-    "adminId":["0","1"]
+    "adminId":["0","1"],
+    "bing":"http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&nc=1361089515117&FORM=HYLH1"
 }

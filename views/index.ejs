@@ -6,8 +6,8 @@
 
 <div class="mainFrame">
     <!-- 主框架 -->
-        <div class="widget imgBanner">
 
+        <div class="widget imgBanner" style="background:url(<%- background %>);">
             <div class="brief">
                 <% if(!user) {%>
                 <%- setting.breif.before  %>
@@ -24,8 +24,8 @@
 
                 <div class="navbar-left">
                     <ul class=" nav navbar-nav ">
-                        <li role="presentation" class="active col-xs-3 col-md-6 col-sm-6"><a href="#">suoyou</a></li>
-                        <li role="presentation" class="col-xs-3 col-md-6 col-sm-6"><a href="#">huodong</a></li>
+                        <li role="presentation" class="active col-xs-3 col-md-6 col-sm-6"><a href="#">所有</a></li>
+                        <li role="presentation" class="col-xs-3 col-md-6 col-sm-6"><a href="#">活动</a></li>
                     </ul>
                 </div>
 
@@ -39,7 +39,6 @@
         <%- partial('./models/bloglist',{articles:articles}) %>
     </div> <!-- content 结束 -->
 </div>
-
 
 
 <script type="text/javascript" src="./js/bootstrap.min.js"></script>

@@ -10,17 +10,15 @@ var mysql = require('../modules/db');
 var models = require('../models');
 var blog = models.blog;
 
-/* GET home page. */
 
 exports.index = function(req, res, next) {
 
-//缓存并不能实时更新，实时更新的只有数据库，缓存只能告诉你你是不是登录着的
-  ep.all('articles',function(articles){
-    // 整合msginfo和userinfo
+  ep.all('articles','background',function(articles,url){
     res.render('index',{
         articles:articles,
         setting:setting,
-        user:req.userinfo
+        user:req.userinfo,
+        background:url
     });
   });
 
@@ -39,6 +37,12 @@ exports.index = function(req, res, next) {
       ep.emit('articles',result);
     }
   });
+
+  //获取首页图片
+  blog.getIndexBack(function(err,data){
+      ep.emit('background',data);
+  });
+
 }
 
 
