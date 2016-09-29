@@ -52,14 +52,14 @@ h3{font-weight: bold;color: #6b7776;}
 }
 
 .guideBar,.usergroup .list-group-item,.guideBar .basegroup .list-group-item{
-    background: rgb(73,58,61);
+    background: #333;
 }
-.guideBar .basegroup .active,.guideBar .basegroup .list-group-item:hover{background: rgb(213,185,112);}
-.guideBar .basegroup .list-group-item{color: #ffffff;border: none;}
+
+.guideBar .basegroup .active,.guideBar .basegroup .list-group-item:hover{background:transparent;}
+.guideBar .basegroup .list-group-item{color: #eee;border: none;}
 .usergroup {position: absolute;bottom: 3%;width: 100%;}
-.usergroup .list-group-item{border:none;color: white;width: 100%;}
+.usergroup .list-group-item{border:none;color: #eee;width: 100%;}
 
 .guideBar-hidden{transform: translateX(-100%);}
-
 
 .flowWindow{display: none;}
