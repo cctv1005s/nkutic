@@ -1,9 +1,0 @@
-.clearfix{overflow: auto;_zoom:1;}
-h1,*{margin:0;padding: 0}
-html,body{height: 100%;width: 100%;}
-
-.main{height: 100%;width: 100%;}
-.main-title{height: 100%;width: 30%;background: #333;float: left;}
-.main-body{height: 100%;width: 70%;background-image: url(http://s.cn.bing.net/az/hprichbg/rb/MontVentoux_ZH-CN13938704019_1920x1080.jpg);float: left;}
-
-.table{width: 100%;height: 100%;filter:blur(10px);position: absolute;top: 0;left: 0}

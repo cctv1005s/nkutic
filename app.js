@@ -8,10 +8,8 @@ var session = require('express-session');
 var webrouter = require('./webrouter');
 var posts = require('./tools/posts')
 var partials = require('express-partials');
-var render_helper = require('./middlewares/render_helper'); 
 
 var posts = require('./tools/posts');
-
 var _ = require('lodash');
 var setting = require('./config/setting')
 
@@ -93,8 +91,8 @@ app.use(function(err, req, res, next) {
   res.redirect('/err')
 });
 
-
-app.listen(3033);
-console.log("listen on 3000");
+var host = 3033;
+app.listen(host);
+console.log("listen on "+host);
 module.exports = app;
 

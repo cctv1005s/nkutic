@@ -1,67 +1,75 @@
-body{min-width: 972px;}
+.clearfix{overflow:hidden;_zoom:1;}
+h1{font-size: 36px;font-weight: normal;color: white;text-shadow: 5px 5px 5px grey;}
+html,body{height: 100%;width: 100%;}
+.fontType{font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
+.left{float: left;}
+.right{float: right;}
 
-@media (max-width: 1560px){
-   .imgBanner{left: 3em;width:20%;}
-   #content{left: 30%;}
+*::-webkit-scrollbar {
+width: 6px!important;
+height: 6px!important;
 }
-/*图片栏内容 大于1560时的大小*/
-@media (min-width: 1560px){
-    .imgBanner{left: 10%;width:20%}
-    #content{left: 32%;}
-}
-/*小于776px时*/
-@media (max-width: 776px){
-    .imgBanner{display: none;}
-     #content{left: 6em;}
+*::-webkit-scrollbar-thumb {
+background-color: rgba(0,0,0,.2);
 }
 
-@media (max-width: 500px){
-     #content{left: 5%;}
-    .search-btn{width: 100%;}
+*::-webkit-scrollbar-track {
+background: rgba(255,255,255,.08);
 }
 
-.imgBanner{position: fixed;background: url(../img/mybanner.gif) 0 0 no-repeat;background-size: cover;}
 
-.brief{position: absolute;bottom: 10%;text-align: center;color: white;width: 100%;}
-.brief button{font-size: 1.5em;font-family: "微软雅黑";}
-.brief h3{color: white;}
-
-/*首页内容栏*/
-#content{padding: 0;position: absolute;width: 50%;min-width: 351px;}
-
-#content .nav-title{margin-top: 15px;font-size: 1em;font-family: "微软雅黑";border-bottom: solid 4px #f3f3f4;margin-bottom: -4px;}
-#content .nav-title .active , #content .nav-title li:hover{margin-bottom: -4px;border-bottom: solid 4px black;}
-
-
-/*登录界面*/
-/*宽度小于500px时*/
-@media (max-width: 500px){
-    .login-box{width: 100%;left: 0 !important;}
-    .login-box-title{font-size: 3em !important;}
-    .login-box-line{display: none;}
-    .input-group{width: 80% !important;}
-}
-
-.login-box{position: absolute;left: 30%;text-align: center;margin-top: 12em;}
-.login-box-title{color: #493A3D;font-size: 5em;}
-.login-box-line{color: #E2E2E2;}
-.login-box-line a {color: grey;text-decoration: none;}
-.input-group{width: 50%;margin: 20px auto;}
-
-
-/*两个按钮公用了一个样式*/
-#registerBtn,#loginBtn{border: none;height: 3em;width: 13em;margin-top: 3em;font-size: 17px;font-family: "微软雅黑";background: #493A3D;color: white;}
-
-/*注册界面*/
-
-/*浮窗*/
+.background{height: 100%;width: 100%;background-image: url(http://s.cn.bing.net/az/hprichbg/rb/MontVentoux_ZH-CN13938704019_1920x1080.jpg);position: absolute;left: 0;top: 0;z-index: -1;}
+.main{margin:0 100px 0 100px;padding: 100px}
+.main-blocks >div{margin: 5px;}
+.main-article-list > div{margin-bottom: 10px;}
+.footer{margin: 0 200px;position: absolute;bottom: 10px;}
+.footer > div{margin-left: 5px;margin-right: 5px;}
+.right-page{width: 555px;}
+.left-page{width: 700px;margin-top: 78px;height: 600px;overflow: auto;}
 
 
 
+.nk-block{position: relative;cursor: pointer;}
+
+/*大小*/
+.nk-block-half{height: 155px;width: 155px;}
+.nk-block-all{height: 155px;width: 320px;}
+.nk-block-halfheight{height: 70px;width: 155px;}
+.nk-block-allheight{height: 70px;width: 320px;}
+
+/*颜色*/
+.nk-block-blue{background-color: rgba(41,167,216,0.8);}
+.nk-block-grey{background-color: rgba(219,229,231,0.8);}
+.nk-block-red{background-color:rgba(207,37,84,0.8); }
+.nk-block-green{background-color: rgba(108,94,14,0.8);}
+.nk-block-icon{line-height: 155px;text-align: center;position: absolute;width: 100%;font-size: 70px;}
+.nk-block-blue .nk-block-icon{color: #fffbff;}
+.nk-block-grey .nk-block-icon{color: #555757;}
+.nk-block-red .nk-block-icon{color:white;}
+.nk-block-green .nk-block-icon{color: white;}
 
 
+/*描述*/
+.nk-block-descripton{position: absolute;left: 0;bottom: 0;padding-left: 10px;width: 100%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.nk-block-title{font-weight: bold;font-size: 17px;}
+.nk-block-blue .nk-block-title{font-weight: bold;color:white;}
+.nk-block-blue .nk-block-subtitle{color:#eee;font-size: 15px;}
+.nk-block-green .nk-block-title,.nk-block-red .nk-block-title{color:white;}
+.nk-block-green .nk-block-subtitle,.nk-block-red .nk-block-subtitle{color:#eee;}
 
+/*article*/
+.nk-article{position: relative;cursor: pointer;padding: 10px;height:155px;width: 100%;}
 
+/*颜色*/
+.nk-article-userhead{}
+.nk-article-userhead > img{width: 100px;height: 100px;border-radius: 100%;}
+.nk-article-userdata{position: relative;padding-top: 10px;height: 100%;}
+.nk-article-usernick{color: white;font-weight: bold;}
+.nk-article-title{color: white;font-size: 26px;}
+.nk-article-info{position: absolute;left: 0;bottom: 0;}
 
+/*文章内容*/
+.nk-article-content{width: 100%;overflow: auto;padding:10px;}
+.nk-article-content-title{font-size: 36px;}
 
-
+ 

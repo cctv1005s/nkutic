@@ -45,7 +45,6 @@ exports.index = function(req, res, next) {
 
 }
 
-
 router.get('/err',function(req,res,next){
     res.render('error',{user:null,setting:setting});
 });

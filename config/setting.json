@@ -3,7 +3,7 @@
     "breif":{"before":"<h1>南开腾讯创新俱乐部</h1><h3>来！和我们一起分享你的经验和见解吧</h3>","after":"<h1>南开腾讯创新俱乐部</h1><h3>来！和我们一起分享你的经验和见解吧</h3>"},
     "userImg":"http://localhost:3000/img/userhead/user1.jpg",
     "articleImg":"http://localhost:3000/img/articleimg/article0.gif",
-    "hostname":"http://localhost:3000",
+    "hostname":"/",
     "adminId":["0","1"],
     "bing":"http://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&nc=1361089515117&FORM=HYLH1"
 }
